@@ -19,6 +19,17 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
   </properties>
 
+  <dependencies>
+    <!-- Para Servlet versão 3 -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <!-- Para não "empacotar" a biblioteca com a aplicação. O application server já possui essa biblioteca.  -->
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
  <build>
     <plugins>
       <plugin>
