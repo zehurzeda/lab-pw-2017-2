@@ -8,24 +8,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(value = "/MaiorMenorController")
+@WebServlet(value = "/mvc/maior-menor-mvc")
 public class MaiorMenorController extends HttpServlet {
 	@Override
 	protected void doGet(
 			HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		//Obtém os parâmetros da requisição.
+		//Obtï¿½m os parï¿½metros da requisiï¿½ï¿½o.
 		String idadeString = request.getParameter("idade");
 		int idade = idadeString == null ? 0 : Integer.parseInt(idadeString);
 		
-		//Executa a regra de negócio.
+		//Executa a regra de negï¿½cio.
 		String resultado =
 				MaiorMenorModel.descricaoDaMaioridade(idade);
 		
 		//Chama a view.
 		//Mandar mensagem para o JSP mostrar.
 		request.setAttribute("resultado", resultado);
-		request.getRequestDispatcher("mvc/MaiorMenorView.jsp").forward(request, response);
+		request.getRequestDispatcher("MaiorMenorView.jsp").forward(request, response);
 	}
 }

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(value = "/maior-menor")
+@WebServlet(value = "/servlet/maior-menor-servlet")
 public class MaiorMenorServlet extends HttpServlet {
 
 	@Override
@@ -18,10 +18,10 @@ public class MaiorMenorServlet extends HttpServlet {
 
 		resp.getOutputStream().print("<html>");
 		resp.getOutputStream().print("<head>");
-		resp.getOutputStream().print("	<title>Cálculo Maior/Menor</title>");
+		resp.getOutputStream().print("	<title>CÃ¡lculo Maior/Menor - Servlet</title>");
 		resp.getOutputStream().print("</head>");
 		resp.getOutputStream().print("<body>");
-		resp.getOutputStream().print("<h2>Cálculo Maior/Menor</h2>");
+		resp.getOutputStream().print("<h2>CÃ¡lculo Maior/Menor - Servlet</h2>");
 		resp.getOutputStream().print("<form>");
 		resp.getOutputStream().print("	Idade <input type=\"number\" name=\"idade\">");
 		resp.getOutputStream().print("	<button>Calcular</button>");
