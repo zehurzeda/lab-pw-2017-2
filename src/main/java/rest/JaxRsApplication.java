@@ -12,7 +12,7 @@ public class JaxRsApplication extends Application {
 	private Set<Object> singletons = new HashSet<Object>();
 
 	public JaxRsApplication() {
-		singletons.add(new MaiorMenorRest());
+		singletons.add(new IMCRest());
 	}
 
 	@Override

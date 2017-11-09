@@ -6,14 +6,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
 @Path("/menormaiorjaxrs")
-public class MaiorMenorRest {
+public class IMCRest {
 
 	@GET
 	@Path("/calcular")
 	@Produces("application/json")
-	public Calculo calcular(@QueryParam("idade") int idade) {
-	  Calculo c = new Calculo(idade);
-	  c.calcular();
-	  return c;
+	public IMC calcular(@QueryParam("peso") int peso, @QueryParam("altura") int altura, @QueryParam("sexo") char sexo) {
+	  IMC imc = new IMC(peso, altura, sexo);
+	  imc.calcular();
+	  return imc;
 	}
 }
