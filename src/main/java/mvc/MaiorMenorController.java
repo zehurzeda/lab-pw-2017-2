@@ -15,11 +15,11 @@ public class MaiorMenorController extends HttpServlet {
 			HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		//Obt�m os par�metros da requisi��o.
+		//Obtém os parâmetros da requisição.
 		String idadeString = request.getParameter("idade");
 		int idade = idadeString == null ? 0 : Integer.parseInt(idadeString);
 		
-		//Executa a regra de neg�cio.
+		//Executa a regra de negócio.
 		String resultado =
 				MaiorMenorModel.descricaoDaMaioridade(idade);
 		
